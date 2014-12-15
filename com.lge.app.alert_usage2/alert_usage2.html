@@ -16,11 +16,13 @@ function myAppend(event) {
 	myAlert.setAttribute("aria-labelledby", "test");
 	var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
 	myAlert.appendChild(myAlertText);
-	document.body.appendChild(myAlert);
+	document.getElementById("app").appendChild(myAlert);
+	//document.body.appendChild(myAlert);
 }
 function myRemove(event) {
 	var myAlert = document.getElementById("test");
-	document.body.removeChild(myAlert);
+	document.getElementById("app").removeChild(myAlert);
+	//document.body.removeChild(myAlert);
 }
 function goBack(event) {
 	window.history.back();
@@ -30,7 +32,7 @@ function goBack(event) {
 <body>
 <br>
 <br>
-<div role="application">
+<div id="app" role="application">
 	<div> alert usage 2 </div>
 	<button onclick="goBack()"> back </button>
 	<br/>
