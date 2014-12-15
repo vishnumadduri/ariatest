@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="shortcut icon" href="assets/favicon.ico"/>
+		<!-- -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<style>
+	.hidden {
+	  display:none;
+	}
+</style>
+<script>
+function myAppend(event) {
+	document.getElementById("expirationWarning").className = "hidden";
+}
+
+function myRemove(event) {
+	document.getElementById("expirationWarning").className = "";
+}
+function goBack(event) {
+	window.history.back();
+}
+</script>
+	</head>
+<body>
+<br>
+<br>
+<div role="application">
+	<div> alert usage 4 </div>
+	<button onclick="goBack()"> back </button>
+	<br />
+	<button onclick="myRemove()"> show </button>
+	<br />
+	<button onclick="myAppend()"> hide </button>
+	<p id="expirationWarning" role="alert" class="hidden">Your log in session will expire in 2 minutes</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="shortcut icon" href="assets/favicon.ico"/>
+		<!-- -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script>
+
+function myAppend(event) {
+	var myAlert = document.createElement("p");
+	myAlert.setAttribute("role", "alert");
+	myAlert.setAttribute("id", "test");
+	myAlert.setAttribute("aria-labelledby", "test");
+	var myAlertText = document.createTextNode("You must agree with our terms of service to create an account.");
+	myAlert.appendChild(myAlertText);
+	document.body.appendChild(myAlert);
+}
+function myRemove(event) {
+	var myAlert = document.getElementById("test");
+	document.body.removeChild(myAlert);
+}
+function goBack(event) {
+	window.history.back();
+}
+</script>
+	</head>
+<body>
+<br>
+<br>
+<div role="application">
+	<div> alert usage 2 </div>
+	<button onclick="goBack()"> back </button>
+	<br/>
+	<button onclick="myAppend()"> append </button>
+	<br/>
+	<button onclick="myRemove()"> remove </button>
+	<div id="parent"><div>
+
+</div>
+
+</body>
+</html>

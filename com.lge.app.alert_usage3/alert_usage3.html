@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="shortcut icon" href="assets/favicon.ico"/>
+		<!-- -->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script>
+
+function setAriaAttr(event) {
+	document.getElementById("formInstruction").setAttribute("role", "alert");
+	document.getElementById("formInstruction").innerHTML = "You must select at least 3 options";
+}
+function removeAriaAttr(event) {
+	document.getElementById("formInstruction").removeAttribute("role");
+	document.getElementById("formInstruction").innerHTML = "";
+}
+function goBack(event) {
+	window.history.back();
+}
+</script>
+	</head>
+<body>
+<br>
+<br>
+<div role="application">
+	<div> alert usage 3 </div>
+	<button onclick="goBack()"> back </button>
+	<br />
+	<button onclick="setAriaAttr()"> setAlert</button>
+	<br />
+	<button onclick="removeAriaAttr()"> removeAlertr</button>
+	<p id="formInstruction" aria-labelledby="formInstruction"></p>
+
+</div>
+
+</body>
+</html>
